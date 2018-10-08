@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2018 The TwrpBuilder Open-Source Project
+# Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,9 +14,5 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-PRODUCT_DEVICE := vivalto5mve3g
-PRODUCT_NAME := omni_vivalto5mve3g
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G316HU
-PRODUCT_MANUFACTURER := samsung
+add_lunch_combo omni_vivalto5mve3g-eng
+

@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-/boot emmc /dev/block/platform/sprd-sdhci.3/by-name/KERNEL
-/data ext4 /dev/block/platform/sprd-sdhci.3/by-name/userdata
-/system ext4 /dev/block/platform/sprd-sdhci.3/by-name/system
-/cache ext4 /dev/block/platform/sprd-sdhci.3/by-name/CSC
-/recovery emmc /dev/block/platform/sprd-sdhci.3/by-name/RECOVERY
-/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
+ifneq ($(filter vivalto5mve3g,$(TARGET_DEVICE)),)
 
+LOCAL_PATH := device/samsung/vivalto5mve3g/
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif
