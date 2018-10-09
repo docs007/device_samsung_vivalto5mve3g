@@ -13,3 +13,10 @@ $ make clean && make -j4 recoveryimage
 or
 
 $ make -j16 recoveryimage
+
+
+Contributers :
+- Surendrajat
+- yshalsager
+- Shaon
+- HWDEV
