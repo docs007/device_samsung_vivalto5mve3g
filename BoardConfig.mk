@@ -18,6 +18,9 @@ LOCAL_PATH := device/samsung/vivalto5mve3g
 
 TARGET_BOARD_PLATFORM := sc8830
 TARGET_BOOTLOADER_BOARD_NAME := vivalto5mve3g
+# Assert
+TARGET_OTA_ASSERT_DEVICE := vivalto5mve3g,SM-G316HU,SC7727S
+TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -30,6 +33,7 @@ BOARD_RECOVERY_SWIPE := true
 BOARD_USES_MMCUTILS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
@@ -57,5 +61,5 @@ TW_THEME := portrait_hdpi
 endif
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-
-
+TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery
+TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
